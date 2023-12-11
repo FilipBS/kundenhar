@@ -1,0 +1,80 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 16vh 37% 37% 10%;
+    grid-template-areas: 
+    'hd hd hd hd'
+    'mn1 mn1 mn2 mn2'
+    'st st st st'
+    'ft ft ft ft';
+    height: 200vh
+}
+
+@font-face {
+    font-family: 'queensides';
+    src: url(/fonts/QueensidesMedium-x30zV.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    grid-area: hd;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    font-family: 'queensides', sans-serif;
+    font-size: 150%;    
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin: 7px;
+}
+
+.searchbar form {
+    display: flex;
+    margin: 0;
+}
+
+.searchbar input {
+    border-style: solid;
+    border-color: black;
+    border-radius: 1px;
+}
+
+.logga {
+    height: 80%;
+    width: 1fr;
+}
+
+.main1 {
+    grid-area: mn1;
+    background-image: url(/img/art_landingpage.png);
+}
+
+.main2 {
+    grid-area: mn2;
+    background-color: blue;
+}
+
+.section {
+    grid-area: st;
+    background-color: orange;
+}
+
+.sub-item {
+    background-color: green;
+}
+
+.footer {
+    grid-area: ft;
+    background-color: burlywood;
+}
