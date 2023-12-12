@@ -1,58 +1,102 @@
 .grid-container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 16vh 37% 37% 10%;
+    grid-template-rows: 13vh 32% 8% 37%;
     grid-template-areas: 
     'hd hd hd hd'
     'mn1 mn1 mn2 mn2'
+    'dv dv dv dv'
     'st st st st'
     'ft ft ft ft';
     height: 200vh
 }
 
 @font-face {
-    font-family: 'queensides';
+    font-family: 'queensides-medium';
     src: url(/fonts/QueensidesMedium-x30zV.ttf);
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'queensides-light';
+    src: url(/fonts/QueensidesLight-ZVj3l.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'queensides';
+    src: url(/fonts/Queensides-3z7Ey.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
+    margin: 0;
     overflow-x: hidden;
 }
 
 header {
     grid-area: hd;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.306);
 }
 
 nav {
     display: flex;
-    font-family: 'queensides', sans-serif;
+    font-family: 'queensides-medium', sans-serif;
     font-size: 150%;    
     justify-content: space-between;
     align-items: center;
 }
 
-nav a {
+nav img {
+    height: 60px;
+}
+
+.navMenu {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.navMenu li a{
     margin: 7px;
+    transition: 0.3s ease;
+}
+
+.navMenu li a:hover {
+    color: blue;
 }
 
 .searchbar form {
     display: flex;
-    margin: 0;
 }
 
 .searchbar input {
     border-style: solid;
-    border-color: black;
-    border-radius: 1px;
+    border-color: rgba(87, 87, 87, 0.637);
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 11px;
+    transition: 0.3s ease;
+}
+
+.searchbar input:hover {
+    border-color: rgb(0, 0, 0);
 }
 
 .logga {
     height: 80%;
-    width: 1fr;
+    margin-left: 4px;
 }
 
 .main1 {
@@ -62,12 +106,58 @@ nav a {
 
 .main2 {
     grid-area: mn2;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artDisplayTitle {
+    font-family: 'queensides-light', sans-serif; 
+    font-size: 160%;
+    
+}
+
+.artDisplayTitle h2 {
+    color: gray;
+}
+
+.button-container {
+    height: 20%;
+    margin-top: 30px;
+}
+
+.button-container button {
+    font-family: 'queensides-medium', sans-serif;
+    font-size: 110%;
+    padding: 0.75em 3em;
+    background: white;
+    border: 1px solid black;
+    border-radius: 100vw;
+    transition: 0.3s ease;
+}
+
+.button-container button:hover {
     background-color: blue;
+    border-color: blue;
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: white;
+}
+
+.div {
+    grid-area: dv;
+    font-family: 'queensides-medium', sans-serif;
+    font-size: 2rem;
+    margin-left: 10px;
+    align-items: bottom;
 }
 
 .section {
     grid-area: st;
-    background-color: orange;
+    display: flex;
+    justify-content: row;
 }
 
 .sub-item {
