@@ -101,7 +101,8 @@ nav img {
 
 .main1 {
     grid-area: mn1;
-    background-image: url(/img/art_landingpage.png);
+    background-image: url(/img/art_landingpage2.png);
+    background-size:contain;
 }
 
 .main2 {
@@ -151,7 +152,12 @@ nav img {
     font-family: 'queensides-medium', sans-serif;
     font-size: 2rem;
     margin-left: 10px;
-    align-items: bottom;
+    position: relative;
+}
+
+.div p {
+    position: absolute;
+    bottom:0;
 }
 
 .section {
@@ -162,6 +168,7 @@ nav img {
 
 .sub-item {
     background-color: green;
+    width: 25%;
 }
 
 .footer {
