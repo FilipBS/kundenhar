@@ -1,13 +1,14 @@
 .grid-container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 13vh 32% 8% 37%;
+    grid-template-rows: 13vh 32% 7% 37% 35vh 3%;
     grid-template-areas: 
     'hd hd hd hd'
     'mn1 mn1 mn2 mn2'
     'dv dv dv dv'
     'st st st st'
-    'ft ft ft ft';
+    'ft ft ft ft'
+    'ftb ftb ftb ftb';
     height: 200vh
 }
 
@@ -95,7 +96,7 @@ nav img {
 }
 
 .logga {
-    height: 80%;
+    height: 100%;
     margin-left: 4px;
 }
 
@@ -145,14 +146,18 @@ nav img {
     text-decoration: underline;
     text-decoration-color: white;
     color: white;
+    cursor: pointer;
 }
 
 .div {
     grid-area: dv;
     font-family: 'queensides-medium', sans-serif;
     font-size: 2rem;
+    width: 48%;
     margin-left: 10px;
+    margin-top: 10px;
     position: relative;
+    border-top: 2px solid rgb(0, 0, 0);
 }
 
 .div p {
@@ -160,18 +165,98 @@ nav img {
     bottom:0;
 }
 
-.section {
+.featured-section {
     grid-area: st;
     display: flex;
     justify-content: row;
 }
 
-.sub-item {
-    background-color: green;
+.featured-card{
+    position: relative;
+    overflow: hidden;
     width: 25%;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.featured-card img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.featured-card img:hover {
+    transform: scale(1.2);
+}
+
+.overlay {
+    font-family: 'queensides-medium', sans-serif;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.37);
+}
+
+.overlay h2 {
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+.overlay h3 {
+    color: gray;
+}
+
+.overlay button {
+    font-family: 'queensides-medium', sans-serif;
+    padding: 0.5em 2rem;
+    background: white;
+    border: 1px solid black;
+    border-radius: 100vw;
+    transition: 0.3s ease;
+}
+
+.overlay button:hover {
+    background-color: blue;
+    border-color: blue;
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: white;
+    cursor: pointer;
 }
 
 .footer {
     grid-area: ft;
-    background-color: burlywood;
+    border-top: 1px solid rgba(0, 0, 0, 0.196);
+    display: flex;
+    justify-content: row;
+}
+
+.footnotes {
+    font-family: 'queensides-medium', sans-serif;
+    width: 25%;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.footer-box {
+    font-family: 'queensides-medium', sans-serif;
+    grid-area: ftb;
+    display: flex;
+    justify-content: row;
+    border-top: 1px solid rgba(0, 0, 0, 0.201);
+}
+
+.footer-box img {
+    height: 100%;
+    margin-left: 10px;
+}
+
+.footer-box p {
+    margin-left: 15px;
+    color: gray;
 }
