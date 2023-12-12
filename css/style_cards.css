@@ -1,15 +1,15 @@
 .grid-container {
     display: grid;
+    height: 148vh;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 13vh 32% 7% 37% 35vh 3%;
+    grid-template-rows: 13vh 7% 47vh 47vh 35vh 3%;
     grid-template-areas: 
     'hd hd hd hd'
-    'mn1 mn1 mn2 mn2'
-    'dv dv dv dv'
-    'st st st st'
+    'tl tl tl tl'
+    'cc cc cc cc'
+    'cc2 cc2 cc2 cc2'
     'ft ft ft ft'
     'ftb ftb ftb ftb';
-    height: 200vh
 }
 
 @font-face {
@@ -100,132 +100,59 @@ nav img {
     margin-left: 4px;
 }
 
-.main1 {
-    grid-area: mn1;
-    background-image: url(/img/art_landingpage2.png);
-    background-size:contain;
+.title {
+    grid-area: tl;
+    font-family: 'queensides', sans-serif;
+    margin: 0 0 10px 30px;
 }
 
-.main2 {
-    grid-area: mn2;
-    background-color: rgb(248, 248, 248);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.artDisplayTitle {
-    font-family: 'queensides-light', sans-serif; 
-    font-size: 160%;
-    
-}
-
-.artDisplayTitle h2 {
-    color: gray;
-}
-
-.button-container {
-    height: 20%;
-    margin-top: 30px;
-}
-
-.button-container button {
-    font-family: 'queensides-medium', sans-serif;
-    font-size: 110%;
-    padding: 0.75em 3em;
-    background: white;
-    border: 1px solid black;
-    border-radius: 100vw;
-    transition: 0.3s ease;
-}
-
-.button-container button:hover {
-    background-color: blue;
-    border-color: blue;
-    text-decoration: underline;
-    text-decoration-color: white;
-    color: white;
-    cursor: pointer;
-}
-
-.div {
-    grid-area: dv;
-    font-family: 'queensides-medium', sans-serif;
-    font-size: 2rem;
-    width: 48%;
-    margin-left: 10px;
-    margin-top: 10px;
-    position: relative;
-    border-top: 2px solid rgb(0, 0, 0);
-}
-
-.div p {
-    position: absolute;
-    bottom:0;
-}
-
-.featured-section {
-    grid-area: st;
+.card-container {
+    grid-area: cc;
     display: flex;
     justify-content: row;
 }
 
-.featured-card{
+.card {
     position: relative;
     overflow: hidden;
     width: 25%;
-    border-radius: 5px;
-    margin: 10px;
+    border-radius: 2px;
+    margin: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s ease;
 }
 
-.featured-card img {
+.card:hover {
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+}
+
+.card-container img {
     width:100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.5s ease;
 }
 
-.featured-card img:hover {
-    transform: scale(1.2);
-}
-
-.overlay {
+.card-overlay {
     font-family: 'queensides-medium', sans-serif;
     position: absolute;
     bottom:0;
     left:0;
     right:0;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
+    background-color: rgba(255, 255, 255);
+    padding-left: 20px;
     border: 1px solid rgba(0, 0, 0, 0.37);
 }
 
-.overlay h2 {
-    margin-top: 0px;
-    font-size: 30px;
+.card-container2 {
+    grid-area: cc2;
+    display: flex;
+    justify-content: row
 }
 
-.overlay h3 {
-    color: gray;
-}
-
-.overlay button {
-    font-family: 'queensides-medium', sans-serif;
-    padding: 0.5em 2rem;
-    background: white;
-    border: 1px solid black;
-    border-radius: 100vw;
-    transition: 0.3s ease;
-}
-
-.overlay button:hover {
-    background-color: blue;
-    border-color: blue;
-    text-decoration: underline;
-    text-decoration-color: white;
-    color: white;
-    cursor: pointer;
+.card-container2 img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .footer {
