@@ -1,10 +1,11 @@
 .grid-container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 13vh 15% 70% 35vh 7vh;
+    grid-template-rows: 13vh 8% 15% 70% 35vh 7vh;
     height: 200vh;
     grid-template-areas: 
     'hd hd hd hd'
+    'div div div div'
     'mn mn mn mn'
     'dv dv dv dv'
     'ft ft ft ft'
@@ -94,8 +95,43 @@ nav img {
     border-color: rgb(0, 0, 0);
 }
 
+.titleBox {
+    grid-area: div;
+    font-family: 'queensides-medium', sans-serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.326);
+    display: flex;
+    align-items: center;
+}
+
+.titleBox h1 {
+    margin-left: 30px;
+    font-size: 50px;
+}
+
+
 .boxThemes {
     grid-area: mn;
+    font-family: 'queensides-medium', sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+}
+
+.theme {
+    width: 17%;
+    height: 128px;
+    padding: 10px;
+}
+
+.theme img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.themeTitle {
+    margin-top: 0px;
+    font-size: 20px;
 }
 
 .boxArtworks {
@@ -106,7 +142,7 @@ nav img {
     grid-area: ft;
     border-top: 1px solid rgba(0, 0, 0, 0.196);
     display: flex;
-    justify-content: row;
+    flex-direction: row;
 }
 
 .footnotes {
@@ -121,7 +157,7 @@ nav img {
     font-family: 'queensides-medium', sans-serif;
     grid-area: ftb;
     display: flex;
-    justify-content: row;
+    flex-direction: row;
     border-top: 1px solid rgba(0, 0, 0, 0.201);
 }
 

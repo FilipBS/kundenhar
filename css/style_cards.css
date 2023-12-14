@@ -104,7 +104,7 @@ nav img {
 .card-container {
     grid-area: cc;
     display: flex;
-    justify-content: row;
+    flex-direction: row;
 }
 
 .card {
@@ -141,7 +141,7 @@ nav img {
 .card-container2 {
     grid-area: cc2;
     display: flex;
-    justify-content: row
+    flex-direction: row;
 }
 
 .card-container2 img {
@@ -154,7 +154,7 @@ nav img {
     grid-area: ft;
     border-top: 1px solid rgba(0, 0, 0, 0.196);
     display: flex;
-    justify-content: row;
+    flex-direction: row;
 }
 
 .footnotes {
@@ -169,7 +169,7 @@ nav img {
     font-family: 'queensides-medium', sans-serif;
     grid-area: ftb;
     display: flex;
-    justify-content: row;
+    flex-direction: row;
     border-top: 1px solid rgba(0, 0, 0, 0.201);
 }
 
