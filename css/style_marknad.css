@@ -1,13 +1,12 @@
 .grid-container {
     display: grid;
-    height: 148vh;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 13vh 7% 47vh 47vh 35vh 7vh;
+    grid-template-rows: 13vh 15% 70% 35vh 7vh;
+    height: 200vh;
     grid-template-areas: 
     'hd hd hd hd'
-    'tl tl tl tl'
-    'cc cc cc cc'
-    'cc2 cc2 cc2 cc2'
+    'mn mn mn mn'
+    'dv dv dv dv'
     'ft ft ft ft'
     'ftb ftb ftb ftb';
 }
@@ -95,59 +94,12 @@ nav img {
     border-color: rgb(0, 0, 0);
 }
 
-.title {
-    grid-area: tl;
-    font-family: 'queensides', sans-serif;
-    margin: 0 0 10px 30px;
+.boxThemes {
+    grid-area: mn;
 }
 
-.card-container {
-    grid-area: cc;
-    display: flex;
-    justify-content: row;
-}
-
-.card {
-    position: relative;
-    overflow: hidden;
-    width: 25%;
-    border-radius: 2px;
-    margin: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
-}
-
-.card-container img {
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-overlay {
-    font-family: 'queensides-medium', sans-serif;
-    position: absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color: rgba(255, 255, 255);
-    padding-left: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.37);
-}
-
-.card-container2 {
-    grid-area: cc2;
-    display: flex;
-    justify-content: row
-}
-
-.card-container2 img {
-    width:100%;
-    height: 100%;
-    object-fit: cover;
+.boxArtworks {
+    grid-area: dv;
 }
 
 .footer {
